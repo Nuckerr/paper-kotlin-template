@@ -1,0 +1,18 @@
+[versions]
+kotlin = "1.9.22"
+shadow = "8.1.1"
+minecraft = "1.20.4-R0.1-SNAPSHOT"
+userdev = "1.5.11"
+pluginyml = "0.6.0"
+runtask = "2.2.3"
+
+configurate = "4.1.2"
+
+[plugins]
+shadow = { id = "com.github.johnrengelman.shadow", version.ref = "shadow" }
+userdev = { id = "io.papermc.paperweight.userdev", version.ref = "userdev" }
+pluginyml = { id = "net.minecrell.plugin-yml.bukkit", version.ref = "pluginyml" }
+runtask = { id = "xyz.jpenilla.run-paper", version.ref = "runtask" }
+
+[libraries]
+configurate = { module = "org.spongepowered:configurate-yaml", version.ref = "configurate" }
