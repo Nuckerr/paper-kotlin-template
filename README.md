@@ -24,9 +24,11 @@ for yours, and you're good to go!
 I will try to keep everything up to date, though do check, and feel free to pr/update.
 Currently on:
 
-`kotlin`: `1.9.22`
-`minecraft`: `1.20.4-R0.1-SNAPSHOT`
-`java`: 17
+**Kotlin:** `1.9.22`
+
+**Minecraft:** `1.20.4-R0.1-SNAPSHOT`
+
+**Java:** `17`
 
 
 ## Run Configurations
