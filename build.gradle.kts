@@ -1,4 +1,6 @@
 import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
+import net.minecrell.pluginyml.paper.PaperPluginDescription
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     kotlin("jvm") version libs.versions.kotlin.get()
@@ -20,16 +22,40 @@ dependencies {
     implementation(libs.configurate)
 }
 
+paper {
+    load = BukkitPluginDescription.PluginLoadOrder.POSTWORLD
+    main = "wtf.nucker.paperkotlintemplate.PaperKotlinTemplate"
+    apiVersion = "1.21"
+
+    name = "PaperKotlinTemplate"
+    description = "Description"
+    authors = listOf("Nucker")
+    website = "nucker.me"
+    prefix = name
+
+    serverDependencies {
+        register("RuntimeDependency") {
+            required = false
+            load = PaperPluginDescription.RelativeLoadOrder.BEFORE
+        }
+    }
+
+    foliaSupported = false
+}
+
 tasks {
+    runServer {
+        downloadPlugins {
+            // ...
+        }
+    }
+
     build {
         dependsOn(shadowJar)
     }
 
     assemble {
         dependsOn(reobfJar)
-    }
-    compileKotlin {
-        kotlinOptions.jvmTarget = "17"
     }
     javadoc {
         options.encoding = Charsets.UTF_8.name()
@@ -39,14 +65,8 @@ tasks {
     }
 }
 
-bukkit {
-    load = BukkitPluginDescription.PluginLoadOrder.POSTWORLD
-    main = "wtf.nucker.paperkotlintemplate.PaperKotlinTemplate"
-    apiVersion = "1.20"
-
-    name = "PaperKotlinTemplate"
-    description = "Description"
-    authors = listOf("Nucker")
-    website = "nucker.me"
-    prefix = name
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_21
+    }
 }

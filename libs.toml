@@ -1,17 +1,17 @@
 [versions]
-kotlin = "1.9.22"
-shadow = "8.1.1"
-minecraft = "1.20.4-R0.1-SNAPSHOT"
-userdev = "1.5.11"
-pluginyml = "0.6.0"
-runtask = "2.2.3"
+kotlin = "2.2.10"
+shadow = "9.1.0"
+minecraft = "1.21.8-R0.1-SNAPSHOT"
+userdev = "2.0.0-beta.18"
+pluginyml = "0.8.0"
+runtask = "2.3.1"
 
-configurate = "4.1.2"
+configurate = "4.2.0"
 
 [plugins]
-shadow = { id = "com.github.johnrengelman.shadow", version.ref = "shadow" }
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
 userdev = { id = "io.papermc.paperweight.userdev", version.ref = "userdev" }
-pluginyml = { id = "net.minecrell.plugin-yml.bukkit", version.ref = "pluginyml" }
+pluginyml = { id = "de.eldoria.plugin-yml.paper", version.ref = "pluginyml" }
 runtask = { id = "xyz.jpenilla.run-paper", version.ref = "runtask" }
 
 [libraries]
