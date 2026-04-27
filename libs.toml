@@ -1,10 +1,10 @@
 [versions]
-kotlin = "2.2.10"
-shadow = "9.1.0"
-minecraft = "1.21.8-R0.1-SNAPSHOT"
-userdev = "2.0.0-beta.18"
-pluginyml = "0.8.0"
-runtask = "2.3.1"
+kotlin = "2.3.21"
+shadow = "9.4.1"
+minecraft = "1.21.11-R0.1-SNAPSHOT"
+userdev = "2.0.0-beta.21"
+pluginyml = "0.9.0"
+runtask = "3.0.2"
 
 configurate = "4.2.0"
 

@@ -25,7 +25,7 @@ dependencies {
 paper {
     load = BukkitPluginDescription.PluginLoadOrder.POSTWORLD
     main = "wtf.nucker.paperkotlintemplate.PaperKotlinTemplate"
-    apiVersion = "1.21"
+    apiVersion = "1.21.11"
 
     name = "PaperKotlinTemplate"
     description = "Description"
