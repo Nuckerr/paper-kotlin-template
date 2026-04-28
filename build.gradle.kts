@@ -53,7 +53,15 @@ tasks {
     build {
         dependsOn(shadowJar)
     }
-
+    artifacts {
+        archives(shadowJar)
+    }
+    jar {
+        enabled = false
+    }
+    shadowJar {
+        archiveClassifier = ""
+    }
     assemble {
         dependsOn(reobfJar)
     }
